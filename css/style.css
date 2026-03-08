@@ -315,7 +315,7 @@ background-repeat: no-repeat;;
     padding-top: 24px;
     padding-bottom: 24px;
 
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.90);
     border-top: 1px solid rgba(255, 255, 255, 0.24);
     border-bottom: 1px solid rgba(255, 255, 255, 0.24);
     overflow: hidden;
@@ -883,6 +883,7 @@ background-repeat: no-repeat;;
   position: relative;
   z-index: 2;
 }
+
 
 
 
