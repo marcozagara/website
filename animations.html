@@ -4,79 +4,177 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ANIMATIONS - Marco Zagara</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      width: 100%;
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: grid;
-      place-items: center;
-      background: #000;
-      color: #fff;
-      font-family: "Space Mono", monospace;
-      overflow: hidden;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-    .wip {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      font-size: clamp(28px, 6vw, 50px);
-      letter-spacing: 0.08em;
-      line-height: 1.1;
-      text-transform: uppercase;
-    }
-
-    .wip-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 22px;
-    }
-
-    .wip-icon {
-      width: clamp(40px, 6vw, 56px);
-      height: auto;
-      display: block;
-      color: #ffffff;
-    }
-
-    .wip-note {
-      margin: 0;
-      font-family: "Rubik", sans-serif;
-      font-size: clamp(14px, 2vw, 20px);
-      text-align: center;
-      line-height: 1.4;
-      width: 100%;
-      max-width: 1200px;
-      padding-inline: 24px;
-    }
-
-    .wip-note a {
-      color: #ffffff;
-      text-decoration: underline;
-      font-weight: 700;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="wip-wrap">
-    <h1 class="wip">WORK IN PROGRESS</h1>
-    <svg class="wip-icon" viewBox="0 0 64 64" aria-hidden="true">
-      <path fill="currentColor" d="M54 36v-8l-5.5-1.8a17 17 0 0 0-1.7-4.1l2.6-5.2-5.7-5.7-5.2 2.6a17 17 0 0 0-4.1-1.7L32 6h-8l-1.8 5.5a17 17 0 0 0-4.1 1.7l-5.2-2.6-5.7 5.7 2.6 5.2a17 17 0 0 0-1.7 4.1L2 28v8l5.5 1.8a17 17 0 0 0 1.7 4.1l-2.6 5.2 5.7 5.7 5.2-2.6a17 17 0 0 0 4.1 1.7L24 58h8l1.8-5.5a17 17 0 0 0 4.1-1.7l5.2 2.6 5.7-5.7-2.6-5.2a17 17 0 0 0 1.7-4.1zM28 40a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
-    </svg>
-    <p class="wip-note">
-      Browse the <a href="index.html">site</a><br>
-      /<br>
-      Visit my <a href="https://instagram.com/marcozagara" target="_blank" rel="noopener noreferrer">instagram</a>
-    </p>
-  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+
+      <a href="index.html" class="nav__brand">MARCOZAGARA</a>
+
+      <div class="nav__links">
+        <a href="index.html#work">WORK</a>
+        <a href="index.html#about">ABOUT</a>
+        <a href="index.html#contact">CONTACT</a>
+        <a href="#">PRINTS</a>
+      </div>
+
+      <div class="nav__icons">
+        <a href="https://instagram.com/marcozagara" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="https://x.com/marcozagara" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <img src="images/x.svg" alt="X">
+        </a>
+
+        <a href="mailto:marcozagara17@email.com" aria-label="Email">
+          <img src="images/email.svg" alt="Email">
+        </a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile-menu" id="navMenu">
+      <div class="nav__mobile-work">
+      <button
+        class="nav__mobile-work-toggle"
+        id="mobileWorkToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobileWorkSubmenu"
+      >
+        <span>WORK</span>
+        <span class="nav__mobile-work-arrow" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav__mobile-submenu" id="mobileWorkSubmenu">
+        <a href="3dart.html">3D ART</a>
+        <a href="animations.html">ANIMATIONS</a>
+        <a href="illustrations.html">ILLUSTRATIONS</a>
+      </div>
+      </div>
+      <a href="index.html#about">ABOUT</a>
+      <a href="index.html#contact">CONTACT</a>
+      <a href="#">PRINTS</a>
+
+      <div class="nav__mobile-icons">
+        <a href="https://instagram.com/marcozagara" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="https://x.com/marcozagara" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <img src="images/x.svg" alt="X">
+        </a>
+
+        <a href="mailto:marcozagara17@email.com" aria-label="Email">
+          <img src="images/email.svg" alt="Email">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE -->
+  <main class="gallery-page">
+    <div class="container">
+      <h1 class="gallery-page__title">ANIMATIONS</h1>
+      <p class="gallery-page__subtitle">A selection of my recent animations</p>
+
+      <div class="animations-grid">
+        <div class="animations-grid__item">
+          <video playsinline preload="metadata" muted>
+            <source src="images/animations/spacering.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="animations-grid__item">
+          <video playsinline preload="metadata" muted>
+            <source src="images/animations/2AM.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="animations-grid__item">
+          <video playsinline preload="metadata" muted>
+            <source src="images/animations/exodus.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="animations-grid__item">
+          <video playsinline preload="metadata" muted>
+            <source src="images/animations/dyson.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="animations-grid__item">
+          <video playsinline preload="metadata" muted>
+            <source src="images/animations/earthhome.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="animations-grid__item">
+          <video playsinline preload="metadata" muted>
+            <source src="images/animations/ring.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="animations-grid__item">
+          <video playsinline preload="metadata" muted>
+            <source src="images/animations/exit.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="animations-grid__item">
+          <video playsinline preload="metadata" muted>
+            <source src="images/animations/cinema.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="animations-grid__item">
+          <video playsinline preload="metadata" muted>
+            <source src="images/animations/bladerunner.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+
+      <div class="explore-more">
+        <h2 class="explore-more__title">EXPLORE MORE</h2>
+        <div class="explore-more__links">
+          <a href="3dart.html">3D ART</a>
+          <a href="illustrations.html">ILLUSTRATIONS</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__text">Copyright &copy; 2026 Marco Zagara. All rights reserved.</div>
+
+      <div class="footer__icons">
+        <a href="https://instagram.com/marcozagara" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="https://x.com/marcozagara" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <img src="images/x.svg" alt="X">
+        </a>
+
+        <a href="mailto:marcozagara17@email.com" aria-label="Email">
+          <img src="images/email.svg" alt="Email">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
