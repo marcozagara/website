@@ -110,7 +110,7 @@ const heroSubtitle = document.querySelector(".hero__subtitle");
 
 if (heroTitle && heroSubtitle) {
   const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&*+-<>?";
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReducedMotion = false;
 
   const randomChar = () => charset[Math.floor(Math.random() * charset.length)];
 
@@ -564,3 +564,4 @@ if (animationVideos.length) {
     });
   }
 }
+
